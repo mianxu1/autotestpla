@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动化平台登录</title>
+</head>
+<body>
+
+<div>
+<h1>自动化平台</h1>
+<form method="post" action="/login/">
+{% csrf_token %}
+<br><a>&nbsp;&nbsp;用户名：</a> <input name="username" type="text" ><!--placeholder="test"   value="test"-->
+<br><br>  <a>&nbsp;&nbsp;密 &nbsp;&nbsp; 码：</a> <input name="password" type="password"><!-- placeholder="test123456" value="test123456"-->
+<br>{{ error }}<br><!--submit() 方法把表单数据提交到 Web 服务器-->
+&nbsp; <button style="width:220px;height:28px;" id="submit" type="submit">登 录</button>
+</form>
+</div>
+
+</body>
+</html>
